@@ -1,10 +1,9 @@
-const generateTeam = team => {
+const generateTeam= team => {
 
 
     //generating manager's HTML
     const generateManager = manager => {
-        return
-        ` 
+        return ` 
         <section class="card employee-card">
 
 
@@ -28,8 +27,7 @@ const generateTeam = team => {
 
     //generating Engineer's HTML
     const generateEngineer = engineer =>{
-        return 
-        `
+        return `
         <section class="card employee-card">
 
 
@@ -53,8 +51,7 @@ const generateTeam = team => {
 
     //generating INTERN's html
     const generateIntern= intern => {
-        return
-        `
+        return `
         <section class="card employee-card">
 
 
@@ -100,8 +97,7 @@ const generateTeam = team => {
 
 //generating the actual html thru module exports
 module.exports = team => {
-    return
-    `
+    return `
     <!DOCTYPE html>
 <html lang="en">
 <head>
