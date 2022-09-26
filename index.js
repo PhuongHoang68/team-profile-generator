@@ -1,4 +1,4 @@
-const inquirer= require ('inquirer');
+const inquirer = require("inquirer");
 const path= require("path");
 const fs= require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
