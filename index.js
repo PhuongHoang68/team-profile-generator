@@ -23,8 +23,7 @@ function startApp() {
             name: "addEmployeePrompt",
             message: "Please select employee type you are adding to your team",
             choices: ["Manager", "Engineer", "Intern", "I'm not adding more team members."]
-        }])
-        .then(function (userInput) {
+        }]).then(function (userInput) {
             switch(userInput.addEmployeePrompt) {
               case "Manager":
                 addManager();
@@ -76,7 +75,7 @@ function addManager() {
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamArray.push(manager);
-      createTeam();
+      buildTeam();
     });
   
   }
@@ -112,7 +111,7 @@ function addManager() {
       ]).then(answers => {
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         teamArray.push(engineer);
-        createTeam();
+        buildTeam();
       });
   
     }
@@ -151,7 +150,7 @@ function addManager() {
       ]).then(answers => {
         const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         teamArray.push(intern);
-        createTeam();
+        buildTeam();
       });
   
     }
@@ -164,7 +163,7 @@ function htmlBuilder () {
   
       fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
   
-  }
+  };
   
 buildTeam();
   
