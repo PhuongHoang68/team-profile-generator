@@ -41,7 +41,9 @@ function startApp() {
           })
 
     }
-}
+
+    
+
 
 
 //adding NEW MANAGER
@@ -76,6 +78,7 @@ function addManager() {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamArray.push(manager);
       buildTeam();
+
     });
   
   }
@@ -112,7 +115,9 @@ function addManager() {
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         teamArray.push(engineer);
         buildTeam();
+
       });
+
   
     }
     
@@ -160,13 +165,16 @@ function addManager() {
   
 function htmlBuilder () {
       console.log("Your team is now built!")
+
+      if(!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+      }
   
       fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
   
   };
-  
+
 buildTeam();
-  
-  
+}; 
   
 startApp();
