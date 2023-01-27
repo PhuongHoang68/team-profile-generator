@@ -7,6 +7,14 @@
 ## What this app is:
 A Node.js command-line app that takes the user's inputs in the command-line and automatically generate an app with the user's engineering team's information.
 
+## User Story
+AS A manager. 
+
+I WANT to generate a webpage that displays my team's basic info. 
+
+SO THAT I have quick access to their emails and GitHub profiles. 
+
+
 
 ## Technical components:
 built using Node.js, inquirer prompts, object-oriented programming and test driven development. Stylized using Bootstrap
